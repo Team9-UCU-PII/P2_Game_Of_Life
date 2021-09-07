@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace PII_Game_Of_Life
 {
@@ -9,7 +10,11 @@ namespace PII_Game_Of_Life
             string rutaTablero = "..\\..\\assets\\board.txt";
             bool[,] tablero = BoardReader.Importar(rutaTablero);
 
-            
+            while (true) {
+                ConsolePrinter.RefreshBoard(tablero);
+                tablero = Game.NextGeneration(tablero);
+                Thread.Sleep(300);
+            }
         }
     }
 }
