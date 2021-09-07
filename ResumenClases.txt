@@ -1,0 +1,13 @@
+Juego
+- CalcularSiguienteGeneracion
+
+Program
+- InicializarTablero
+- ActualizarTablero
+- ControlarVelocidad
+
+LectorTablero
+- Importar
+
+ConsolePrinter
+- ImprimirTablero

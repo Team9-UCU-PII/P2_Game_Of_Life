@@ -6,7 +6,10 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string rutaTablero = "..\\..\\assets\\board.txt";
+            bool[,] tablero = BoardReader.Importar(rutaTablero);
+
+            
         }
     }
 }
