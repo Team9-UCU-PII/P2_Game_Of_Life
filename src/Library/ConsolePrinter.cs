@@ -1,22 +1,21 @@
 using System;
+using System.Text;
 
 namespace PII_Game_Of_Life
 {
     public class ConsolePrinter {
-        public static 
-
-        bool[,] b //variable que representa el tablero
-        int width //variabe que representa el ancho del tablero
-        int height //variabe que representa altura del tablero
-        while (true)
-        {
+        public static void RefreshBoard(bool[,] board) {
             Console.Clear();
+            int width = board.GetLength(0);
+            int height = board.GetLength(1);
+
             StringBuilder s = new StringBuilder();
-            for (int y = 0; y<height;y++)
+
+            for (int y = 0; y < height; y++)
             {
-                for (int x = 0; x<width; x++)
+                for (int x = 0; x < width; x++)
                 {
-                    if(b[x,y])
+                    if(board[x,y])
                     {
                         s.Append("|X|");
                     }
@@ -27,11 +26,8 @@ namespace PII_Game_Of_Life
                 }
                 s.Append("\n");
             }
+
             Console.WriteLine(s.ToString());
-            //=================================================
-            //Invocar método para calcular siguiente generación
-            //=================================================
-            Thread.Sleep(300);
         }
     }
 }
